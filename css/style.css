@@ -1,0 +1,792 @@
+html {
+    font-size: 100%;
+    font-family: 'Open Sans', Helvetica, Verdana, sans-serif; /*alle font op de website*/
+    box-sizing: border-box;
+    background-color: #ffcb00;
+    background-repeat: no-repeat;  /*achtergrond niet herhalen*/
+    background-size: 12%;
+    background-attachment: fixed;
+    background-position: top left, top right; /* waar de achtergrond zich bevindt*/
+}
+
+*, *:before, *:after {
+      box-sizing: inherit;
+}
+
+body {
+    max-width: 80em;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%; /*maximale grootte van de img tag*/
+    height: auto;
+}
+
+ /*kleur van de koppen 1, 2 en 3*/
+h1, h2, h3 {
+    color: #000;
+}
+
+ /*specifieker alleen voor h1*/
+h1 {
+    font-size: 1.8em;
+    line-height: 1em;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+/*alleen voor h2*/
+h2 {
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-top: 1rem;
+}
+
+ /*alleen voor h3*/
+h3 {
+    font-size: 1.3em;
+    line-height: 1.5em;
+    margin-top: 0.5rem;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: #A49E9E;
+    font-weight: 600;
+    text-decoration: none;  /*decoratie voor de tekst*/
+}
+
+a:hover {
+    color: orange;  /*als over een link gehovert wordt, gebeurt dit*/
+}
+
+/* HEADER
+=========== */
+
+body > header {
+    margin-top: 1rem;
+}
+
+body > header > h1, body > header > p {
+    display: inline-block;
+}
+
+body > header > section {
+    margin-top: 1rem;
+}
+
+body > header > h1 {
+    font-weight: 300; /*font dikte*/
+    font-size: 1.2em;
+    padding-right: 1rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    border-right: 1px solid white;
+}
+
+body > header > p {
+    font-weight: 200;
+    padding-bottom: 0.3rem;
+    padding-top: 0.2rem;
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+    font-style: italic; /*font stijl italic*/
+    letter-spacing: 1px;  /*spatie tussen letters*/
+}
+
+header > section > img {
+    width: auto; /*breedte*/
+    height: 6em;  /*lengte*/
+}
+
+/*specifiek form na een header*/
+header > form {
+    float: right;    /*begin rechts*/
+    overflow: hidden;   /*scrollbar schuilen*/
+    margin-top: -10em;
+    margin-right: 16em;
+
+}
+
+header > form input[type="text"] {
+    font-size: 0.9em;
+    border-radius: 0.2rem; /*de hoekranden van de borders*/
+    width: 15em;
+    padding: 1.1em;
+    border: none;
+}
+
+header > a {   /*specifiek link na een header*/
+    float: right;
+    overflow: hidden;
+    margin-top: -10em;
+    display: inline-block;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border: 1px solid #FFF;
+    border-radius: 0.2rem;
+    background-color: #efbe00;
+    transition: 0.5s background-color;
+}
+
+header > a:hover {  /*hover event*/
+    color: #FFF;
+    background-color: #dcb003;
+}
+
+body > header {
+    width: 100%;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+header > nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /*content uitgevuld uitgelijnd*/
+    align-items: center; /*items gecentreerd of in het midden*/
+}
+
+nav ul li a {
+    display: block;
+    font-weight: 400;
+    padding: 1rem 4.25rem;
+    text-decoration: none;
+    color: #FFF;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition-property: background-color;
+    border-radius: 0.2rem;
+    background-color: #1a1a18;
+}
+
+nav ul li a:hover {   /*hover event bij dit onderdeel*/
+    color: #FFF;
+    background-color: lightgrey;
+    text-shadow: none;
+}
+
+@media (max-width: 82.5em) {  /*toegevoegde media maxiamale breedte*/
+
+    body {
+        max-width: 70em;
+    }
+
+    nav ul li a {
+        padding: 1rem 3.25rem;
+    }
+
+    header > form {
+        margin-right: 13.5rem;
+    }
+
+    header > form input[type="text"] {
+        font-size: 0.8em;
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+    }
+
+    header > a {
+        font-size: 0.8em;
+        margin-top: -12.5em;
+    }
+
+}
+
+@media (max-width: 72.5em) {
+    body {
+        max-width: 60em;
+    }
+
+    nav ul li a {
+        padding: 1rem 2.25rem;
+    }
+
+    body > header > h1, body > header > p {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    body > header > h1 {
+        border-right: none;
+        margin-bottom: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    header > form {
+        margin-right: 15em;
+    }
+
+    header > a {
+        margin-right: 1em;
+    }
+}
+
+@media (max-width: 59.5em) {
+    html {
+        background-image: none; /*geen achtergrond img*/
+    }
+
+    body > header > section, body > header > p, body > header > h1 {
+        padding-left: 0.5rem;
+    }
+
+    header > nav > ul {
+        background: #1a1a18;
+        justify-content: flex-start;
+    }
+
+    nav ul li a {
+        border-radius: 0;
+        padding: 1.5rem;
+        border-right: 1px solid #444;
+    }
+}
+
+@media (max-width: 51em) {
+
+    body > header > h1, body > header > p,     body > header > section {
+        margin: auto;
+        margin-bottom: 0.5rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    body > header > section > img {
+        height: 4em;
+    }
+
+    header > a, header > form {
+        position: static;   /*satisch positie van deze onderdelen*/
+        margin: 0;
+        float: left;  /*begint van de linkerkant van de pagina*/
+        clear: both;   /*items ervoor of erna zullen dit onderdeel niet verstoren*/
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    header > a, header > form > input[type="text"] {
+        display: block;  /*gedraagt zich als een blok*/
+        margin: 0;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    main {
+        margin-top: 8.5em;
+    }
+
+    header > nav::before {  /*item ervoor*/
+        content: "MENU";
+        display: block;
+        text-align: center;
+        height: 3em;
+        line-height: 3em;
+        color: #FFF;
+        background-color: #000;
+    }
+
+    header > nav:hover {   /*hover event*/
+        cursor: pointer;
+    }
+
+    header > nav ul {
+        overflow: hidden;  /*scrollbar schuilen*/
+        max-height: 30em;
+        transition: 0.5s;
+        transition-property: max-height;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header > nav ul li a {
+        border: none;
+    }
+
+    header > nav ul li {
+        display: block;
+        width: 100%;
+        border-right: 1px solid #444;
+        border-bottom: 1px solid #444;
+        border-left: 1px solid #444;
+    }
+
+    .menu-closed {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    main > article > aside > article > section > ul > li > a  {
+        word-wrap:break-word;
+    }
+
+    body > header > p, body > header > h1  {
+        display: none;    /*onderdeel verschuilen*/
+    }
+}
+
+
+/* MAIN
+============= */
+
+main {
+    float: left;
+    width: 65%;
+    margin-right: 2%;
+    color: #646464;
+    padding: 1rem 2rem 4rem 2rem;
+    border-radius: 0.2em;
+    background: rgba(255,255,255,1);
+}
+
+main p em {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.2em;
+    border: 1px solid #319D68;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 0.2em;
+    max-width: 32em;
+}
+
+main > img {
+    margin: 2rem 0;
+}
+
+main ol {
+    margin-left: 2rem;
+    list-style: decimal;
+}
+
+main ol a {
+    line-height: 1.5em;
+}
+
+body > main > article > a {
+    font-weight: 500;
+    display: block;
+    max-width: 15em;
+    height: 3em;
+    text-align: center;
+    line-height: 3em;
+    background-color: #000;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 0.2rem;
+}
+
+body > main > article > a:hover {
+    background-color: #333;
+    color: #FFF;
+}
+
+body > main > article > header > h1, body > aside > h1, body > main > article > aside > h1 {
+    text-transform: uppercase;  /*het moet in hoofdletters*/
+}
+
+main > article > aside {
+    background-color: #F3D7D7;
+    border: 1px solid #DDD;
+    padding: 1rem 2rem;
+}
+
+main > article > aside > article {
+    border-top: 1px solid #fff;
+    padding-bottom: 2rem;
+}
+
+main > article > aside > article > header > h1 {
+    font-size: 1.5em;
+}
+
+main > article > aside > article > section > h1 {
+    font-size: 1.2em;
+}
+
+main > article > aside > article > img {
+    margin: 1rem 0;
+}
+
+ /*video onderdeel*/
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+
+/* SIDEBAR
+============= */
+
+body > aside {
+    width: 33%;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #FFF;
+    border-radius: 0.2rem;
+}
+
+body > aside > article {
+  box-sizing: border-box;
+  background-color: #FFF;
+  margin-right: 3%;
+  margin-bottom: 1.5rem;
+  float: left;
+}
+
+body > aside > article > section {
+  max-height: 10em;
+  transition: 0.5s;
+  transition-property: max-height;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+body > aside > article > input[type="checkbox"] {
+  display: none;
+}
+
+body > aside > article > label {
+  color: #FFF;
+  margin: 0 auto;
+  display: block;
+  width: 10em;
+  text-align: center;
+  padding: 1em 0;
+  background-color: #000;
+  border-radius: 0.2em;
+}
+
+#agenda {
+    background-color: bisque;
+}
+
+body > aside > article > label:hover {
+  background-color: #c9c9c9;
+  cursor: pointer;
+}
+
+body > aside > article input[type="checkbox"] ~ label:last-of-type {
+  display: none;   /*verscholen*/
+}
+
+body > aside > article input[type="checkbox"]:checked ~ label:last-of-type {
+  display: block;
+}
+
+body > aside >article input[type="checkbox"]:checked ~ label:first-of-type {
+  display: none;
+}
+
+body > aside > article input[type="checkbox"]:checked + section{
+  max-height: 160em;
+  -webkit-mask-image: none;  /*geen chrome mask*/
+}
+
+main > article > aside {
+    margin-top: 4rem;
+}
+
+body > footer {
+    width: 100%;
+    clear: both;
+}
+
+
+@media (max-width: 72.5em) {
+    main {
+        width: 58%;
+    }
+
+    body > aside {
+        width: 40%;
+    }
+}
+
+@media (max-width: 59.5em) {
+    main {
+        float: none;
+        width: 100%;
+    }
+
+    body > aside {
+        margin-top: 2em;
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 51em) {
+    main {
+        padding: 1rem;
+    }
+
+    main > article > aside {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 31.250em) {
+    main {
+        padding: 1em;
+    }
+}
+
+
+/* ARTIKELEN EN PROJECTEN
+============= */
+
+body > aside > article > header > h1 {
+    font-size: 1.5em;
+    border-top: 1px solid #EEE;
+    padding-top: 1rem;
+}
+
+aside > article > header > p {
+    margin-bottom: 0;
+    color: #646464;
+}
+
+article > footer {
+    margin: 1rem 0;
+    border: 1px solid #efefef;
+    padding: 1rem;
+    padding-top: 0.5rem;
+}
+
+article > footer > p {
+    margin: 0;
+}
+
+article > footer > h1 {
+    font-size: 1.2rem;
+}
+
+blockquote {
+    color: #545454;
+    font-style: italic;
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.6em;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #efefef;
+    background: url(../images/quotation.png) top left no-repeat; /*background toevoegen tot dit onderdeel*/
+}
+
+section > ul {
+    line-height: 1.6em;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+
+/* FORMULIER
+============= */
+
+input, textarea, select {
+    display: block;
+}
+
+label {
+    margin-left: 0.2rem;
+}
+
+label + input {
+    margin-bottom: 1rem;
+}
+
+fieldset > input, fieldset > textarea, fieldset > select {
+    color: #646464;
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+fieldset > input:focus, fieldset > textarea:focus {
+    outline: 1px solid #999;
+}
+
+select {
+    margin-bottom: 1rem;
+}
+
+input {
+    border: 1px solid #CCC;
+}
+
+textarea {
+    resize: none;  /*geen aanpassing volgens grootte*/
+    width: 100%;
+    height: 9em;
+    margin-bottom: 1rem;
+    border: 1px solid #CCC;
+}
+
+input:focus {
+    box-shadow: inset 0px 0px 1px 0px #EEE;
+}
+
+fieldset {
+    max-width: 100%;
+    border: 1px solid #efefef;
+    margin: 0.8rem 0;
+    padding: 1rem 3rem;
+}
+
+legend {
+    margin-left: 1rem;
+}
+
+input[type=radio] {
+    display:none;
+}
+
+input[type=radio] + label {
+    display: inline-block;
+    width: 11em;
+    height: 3em;
+    line-height: 3em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle; /*in het midden, vertikaal gezien*/
+    cursor: pointer;        /*cursor naar een pointer op dit onderderdeel*/
+    background-color: #f5f5f5;
+    background: linear-gradient(#fff, #e6e6e6);  /*gradient effect op de achtergrond*/
+    border: 1px solid #ccc;
+}
+
+input[type=radio]:checked + label { /*hoe het eruit moet zien als het checked is*/
+    background-image: none;  /*geen achtergrond*/
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15), 0 1px 2px rgba(0,0,0,0.05); /*ingedrukt en schaduw style*/
+    background-color:#e0e0e0;
+}
+
+fieldset > legend {
+    font-size: 1.3em;
+}
+
+main > form > input[type="submit"]{
+    font-size: 1em;
+    background-color: #999999;
+    padding: 1em 2em;
+    color: white;
+}
+
+main > form > input[type="submit"]:hover {  /*aanpassingen bij de submit buttonS*/
+    background-color: #E9E9E9;
+    cursor: pointer;   /*cursor verandert tot een pointer over dit onderdeel*/
+}
+
+
+@media (max-width: 31.250em) {
+    fieldset {
+        padding: 1rem;
+    }
+}
+
+/* FOOTER */
+
+body > footer {
+    display: inline-block;
+    min-height: 50em;
+    background-color: #333;
+    margin: 2rem 0;
+      padding: 2em;
+      border-radius: 0.2rem;
+      color: #FFF;
+      position: relative; /*relatief positie*/
+}
+
+body > footer > h1 {
+    font-size: 1.5em;
+    color: #FFF;   /*kleur van specifieke link*/
+}
+
+body > footer > p {
+    margin-bottom: 0;
+}
+
+body > footer > p > a {
+    color: #FFF;
+}
+
+body > footer > ul > li {
+    font-weight: bold;  /*font in dit onderdeel moet bold*/
+    font-size: 1.1em;
+}
+
+body > footer > ul, body > footer > h1:first-child {
+    width: 30%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    float: left;
+    clear: both;
+    position: static;
+}
+
+body > footer > ul > li {
+    line-height: 3em;
+}
+
+body > footer > ul > ul > li {
+    line-height: 1.4em;
+}
+
+body > footer > h1, body > footer > p, body > footer > form {
+    width: 60%;
+    float: right;
+    position: relative;
+    top: -3.4rem;
+    overflow: hidden;
+}
+
+body > footer > form > input[type="text"] {
+    float: left;
+    font-size: 1em;
+}
+
+body > footer > form > input[type="submit"] {
+    float: left;
+    font-size: 0.8em;
+    background-color: #EEE;
+}
+
+@media (max-width: 44.75em) {  /*bij media toevoeging*/
+
+    body > footer > ul, body > footer > h1:first-child {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    body > footer > h1, body > footer > p, body > footer > form {
+        position: static;
+        float: none;
+        width: 100%;
+    }
+
+}
+
+
+/* QUERY SELECTOR EN CLASSLIST (CLASSES)
+========================================= */
+
+.hide{
+    display: none;  /*verscholen*/
+}
